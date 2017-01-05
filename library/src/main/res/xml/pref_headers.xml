@@ -1,0 +1,23 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:fragment="cn.bjzhou.debugtools.lib.ui.log.LogFragment"
+        android:title="@string/pref_header_log" />
+
+    <header
+        android:fragment="cn.bjzhou.debugtools.lib.ui.anr.ANRFragment"
+        android:title="@string/pref_header_anr" />
+
+    <header
+        android:fragment="cn.bjzhou.debugtools.lib.ui.sp.SPFragment"
+        android:title="@string/pref_header_sp" />
+
+    <header
+        android:fragment="cn.bjzhou.debugtools.lib.ui.db.DatabaseFragment"
+        android:title="@string/pref_header_database" />
+
+    <header
+        android:fragment="cn.bjzhou.debugtools.lib.ui.file.FileFragment"
+        android:title="@string/pref_header_file" />
+
+</preference-headers>
