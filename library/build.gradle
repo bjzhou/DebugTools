@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 25
@@ -11,8 +12,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -29,14 +28,15 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:support-v4:25.1.0'
-    compile 'com.android.support:support-vector-drawable:25.1.0'
     testCompile 'junit:junit:4.12'
 }
 
-task dist(dependsOn: 'assembleRelease', group: 'dist') {
-    doLast {
-        def baseName = "build/outputs/aar/"
-        def fileName = baseName + "library-release.aar"
-        file(fileName).renameTo(file(baseName + "debugTools-release.aar"))
-    }
+publish {
+    userOrg = 'bjzhou'
+    groupId = 'cn.bjzhou'
+    artifactId = 'debugTools'
+    dryRun = false
+    publishVersion = '0.1.0'
+    desc = 'Android Debug Tools'
+    website = 'https://github.com/bjzhou/DebugTools'
 }
