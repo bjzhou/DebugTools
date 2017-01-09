@@ -12,6 +12,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -31,7 +32,7 @@ dependencies {
 
 publish {
     groupId = 'cn.bjzhou'
-    artifactId = 'debugTools'
+    artifactId = 'debugTools-op'
     dryRun = false
     publishVersion = '0.1.1'
     desc = 'Android Debug Tools'

@@ -1,15 +1,14 @@
 package cn.bjzhou.debugtools.lib.ui.log;
 
+import android.app.ActionBar;
+import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +19,7 @@ import cn.bjzhou.debugtools.lib.ui.anr.ANR;
  * author: zhoubinjia
  * date: 2017/1/2
  */
-public class LogDetailActivity extends AppCompatActivity implements LogTask.OnUpdateListener, SearchView.OnQueryTextListener {
+public class LogDetailActivity extends Activity implements LogTask.OnUpdateListener, SearchView.OnQueryTextListener {
     private LogTask mLogTask;
 
     private TextView mLogText;
@@ -29,7 +28,7 @@ public class LogDetailActivity extends AppCompatActivity implements LogTask.OnUp
     private String mAllLog;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         String tag = getIntent().getStringExtra("tag");
         String level = getIntent().getStringExtra("level");
@@ -38,7 +37,7 @@ public class LogDetailActivity extends AppCompatActivity implements LogTask.OnUp
         ANR anr = getIntent().getParcelableExtra("anr");
         setContentView(R.layout.activity_log_detail);
         findViews();
-        ActionBar actionBar = getSupportActionBar();
+        ActionBar actionBar =getActionBar();
         mLogText.setText("Waiting...");
         String title = "Log Detail";
         if (anr != null) {

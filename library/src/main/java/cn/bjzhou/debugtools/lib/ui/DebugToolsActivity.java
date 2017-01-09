@@ -2,18 +2,18 @@ package cn.bjzhou.debugtools.lib.ui;
 
 
 import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
+import android.preference.PreferenceActivity;
 import android.view.MenuItem;
 
 import java.util.List;
 
 import cn.bjzhou.debugtools.lib.R;
-import cn.bjzhou.debugtools.lib.ui.base.AppCompatPreferenceActivity;
 
-public class DebugToolsActivity extends AppCompatPreferenceActivity {
+public class DebugToolsActivity extends PreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class DebugToolsActivity extends AppCompatPreferenceActivity {
     }
 
     private void setupActionBar() {
-        ActionBar actionBar = getSupportActionBar();
+        ActionBar actionBar = getActionBar();
         if (actionBar != null) {
             // Show the Up button in the action bar.
             actionBar.setDisplayHomeAsUpEnabled(true);

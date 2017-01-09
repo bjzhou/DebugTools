@@ -1,10 +1,9 @@
 package cn.bjzhou.debugtools.lib.ui.db;
 
+import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -21,7 +20,7 @@ import cn.bjzhou.debugtools.lib.R;
  * author: zhoubinjia
  * date: 2017/1/3
  */
-public class DbDetailActivity extends AppCompatActivity implements View.OnClickListener {
+public class DbDetailActivity extends Activity implements View.OnClickListener {
     private TextView mColumnsValue;
     private EditText mExecEditText;
     private Button mExecButton;
@@ -32,7 +31,7 @@ public class DbDetailActivity extends AppCompatActivity implements View.OnClickL
     private String[] mColumnNames;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_db_detail);
         findViews();

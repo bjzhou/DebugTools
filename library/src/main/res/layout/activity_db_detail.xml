@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:text="exec"
         android:layout_marginTop="8dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+        android:textSize="12sp"
+        android:textColor="?android:attr/textColorSecondary"/>
 
     <LinearLayout
         android:layout_marginTop="8dp"
@@ -41,7 +42,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Columns"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+        android:textSize="12sp"
+        android:textColor="?android:attr/textColorSecondary" />
 
     <TextView
         android:id="@+id/columnsValue"
@@ -52,14 +54,15 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:padding="8dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textAppearance="@android:style/TextAppearance.Medium"
         tools:text="Column" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Result"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+        android:textSize="12sp"
+        android:textColor="?android:attr/textColorSecondary" />
 
     <ScrollView
         android:background="#eeeeee"
@@ -71,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@android:style/TextAppearance.Medium"
             tools:text="TextView" />
     </ScrollView>
 
