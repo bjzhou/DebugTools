@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hinnka.devtools">
+
+    <application>
+        <activity
+            android:name=".ui.DebugToolsActivity"
+            android:theme="@style/DebugToolsTheme"
+            android:label="@string/title_activity_debug_tools" />
+        <activity
+            android:name=".ui.log.LogDetailActivity"
+            android:theme="@style/DebugToolsTheme" />
+        <activity android:name=".ui.db.DbDetailActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/DebugToolsTheme" />
+        <provider
+            android:authorities="com.hinnka.devtools.ui.DebugContentProvider"
+            android:name=".ui.DebugContentProvider"
+            android:exported="false" />
+        <activity
+            tools:node="replace"
+            android:theme="@style/leak_canary_LeakCanary.Base"
+            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
+            android:process=":leakcanary"
+            android:enabled="false"
+            android:label="@string/leak_canary_display_activity_label"
+            android:icon="@mipmap/leak_canary_icon"
+            android:taskAffinity="com.squareup.leakcanary.${applicationId}"
+            >
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,27 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:fragment="com.hinnka.devtools.ui.log.LogFragment"
+        android:title="@string/pref_header_log" />
+
+    <header
+        android:fragment="com.hinnka.devtools.ui.anr.ANRFragment"
+        android:title="@string/pref_header_anr" />
+
+    <header
+        android:fragment="com.hinnka.devtools.ui.sp.SPFragment"
+        android:title="@string/pref_header_sp" />
+
+    <header
+        android:fragment="com.hinnka.devtools.ui.db.DatabaseFragment"
+        android:title="@string/pref_header_database" />
+
+    <header
+        android:fragment="com.hinnka.devtools.ui.file.FileFragment"
+        android:title="@string/pref_header_file" />
+
+    <header
+        android:id="@+id/leak"
+        android:title="Leak Canary" />
+
+</preference-headers>
